@@ -17,7 +17,7 @@ def create_cook_book():
                 j += 1
             cook_book[line.strip()] = ingridients
             f.readline()
-        return cook_book
+    return cook_book
 
 def get_shop_list_by_dishes(dishes, person_count):
     shop_list = {}
