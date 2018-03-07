@@ -2,15 +2,14 @@ def create_cook_book():
     with open("cook_book.txt") as f:
         cook_book = {}
         for line in f:
-            ingridient_list = []
             ingridients = []
             number_of_ingridients = int(f.readline().strip())
             j = 0
             while j < number_of_ingridients:
-                ingridient_list.append(f.readline().strip().split(' | '))
-                ingridients.append({'ingridient_name': ingridient_list[j][0],\
-                      'quantity': int(ingridient_list[j][1]),\
-                      'measure': ingridient_list[j][2]})
+                ingridients_line = f.readline().strip().split(' | ')
+                ingridients.append({'ingridient_name': ingridients_line[0],\
+                      'quantity': int(ingridients_line[1]),\
+                      'measure': ingridients_line[2]})
                 j += 1
             cook_book[line.strip()] = ingridients
             f.readline()
