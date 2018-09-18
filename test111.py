@@ -8,7 +8,7 @@ def create_matrix(M,N):
     elif randomr.lower() == 'no':
         matrix = []
         for i in range(N):
-            string = input('Введите элементы без запятых и пробелов (количество элементов {}) строки {} '.format(M,i+1))
+            string = input('Введите элементы без запятых и пробелов (количество элементов {}) строки {}: '.format(M,i+1))
             list_string = list(string)
             float_string = []
             for ele in list_string:
@@ -19,8 +19,8 @@ def create_matrix(M,N):
 
 
 def input_data():
-    M = int(input('Введите количество столбцов матрицы ', ))
-    N = int(input('Введите количество строк матрицы ', ))
+    M = int(input('Введите количество столбцов матрицы: ', ))
+    N = int(input('Введите количество строк матрицы: ', ))
     matrix = create_matrix(M,N)
     return matrix
 
